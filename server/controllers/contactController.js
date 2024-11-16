@@ -153,7 +153,8 @@ const updateContact = async (req, res) => {
 
 
 const deleteContacts = async (req, res) => {
-    const { fName, lName } = req.body;
+    const fName = req.query.fName;
+    const lName = req.query.lName;
 
     try {
         if (!fName || !lName) {
